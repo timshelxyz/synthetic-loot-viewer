@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "homepage": "https://timshelxyz.github.io/synthetic-loot-viewer",
   "private": true,
   "dependencies": {
     "@download/blockies": "^1.0.3",
@@ -11,6 +12,7 @@
     "bootstrap": "^4.4.1",
     "eth-ens-namehash": "^2.0.8",
     "ethers": "^5.4.6",
+    "gh-pages": "^6.1.1",
     "loot-rarity": "^4.2.0",
     "merge-images": "^2.0.0",
     "qr-image": "^3.2.0",
@@ -21,6 +23,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+	"predeploy": "yarn run build",
+	"deploy": "gh-pages -d build",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
